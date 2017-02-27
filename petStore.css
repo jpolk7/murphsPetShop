@@ -1,0 +1,170 @@
+/*
+** CSS below just for debug purposes
+
+div {
+	border: 1px solid grey;
+	
+}
+*/
+
+
+/* change to use border-box sizing 
+*/
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  	position: relative;
+  	margin: 0;
+  	padding-bottom: 2rem;
+  	min-height: 100%;
+
+  	font-family: 'Open Sans', sans-serif;
+	font-size: 1em; 
+}
+
+
+
+#headerDiv {
+	width: 85%;
+	margin: 0 auto;
+}
+
+h1 {
+	color: navy;
+	font-size: 3rem;
+	font-weight: bold;
+	max-width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.sectionHeader {
+	margin: 1rem;
+	color: orange;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+.sectionContainerDiv {
+	width: 100%;
+	margin: 0 auto;
+	align-items: center;
+}
+
+#petsContainerDiv {
+	text-align: center; /* need this to center div children within */
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	width: 100%;
+}
+
+.petDiv {
+	border: 2px solid black;
+	display: inline-block;
+	min-height: 15rem;
+	width: 32%;
+	margin: 0 auto;
+	background-size: cover;
+	background-position: center;
+	max-height: 20rem;
+	list-style-type: none;
+}
+
+#pet1Div {
+	background-image: url("images/pet4.jpeg");   		
+}
+
+#pet2Div {
+	background-image: url("images/pet5.jpeg");   		
+	
+}
+
+#pet3Div {
+	background-image: url("images/pet3.jpeg");   		
+	
+}
+
+
+
+#adoptText {
+	margin: 3rem;
+}
+
+footer {
+	margin-top: 5rem;
+}
+
+#footerCopyright {
+	text-align: center;
+	width: 30%;
+	margin: 0 auto;
+	font-size: .8rem;
+
+	position: absolute;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	padding: .8rem;
+}
+
+
+/* responsive media tags */
+/* make your site responive so that it looks good on various popular phones such as
+** the iphone 5 320px, iphone 6 375px, nexus 6P 412px, and iPad 768px. The smallest of these is the iphone5 which
+** has a width of 320 pixels 
+*/
+@media screen and (max-width: 768px) { /*iPad*/
+	body {
+		background-color: lightblue;
+	}
+	.petDiv {
+		width: 30%;
+		margin: .5rem;
+	}
+}
+@media screen and (max-width: 415px) { /*Nexus 6p*/
+	body {
+		background-color: gray;
+	}
+	.petDiv {
+		width: 46%;
+		margin:.5rem;
+	}
+	h1 {
+		font-size: 34px;
+	}
+}
+@media screen and (max-width: 376px) { /*iPhone 6*/
+	body {
+		background-color: lightgreen;
+	}
+	.petDiv {
+		width: 95%;
+		margin: .5rem;
+	}
+	h1 {
+		font-size: 30px;
+	}
+}
+@media screen and (max-width: 320px) { /*iPhone 5*/
+	body {
+		background-color: lightyellow;
+	}
+	.petDiv {
+		width: 100%;
+		margin: .5rem;
+	}
+	h1 {
+		font-size: 26px;
+	}
+}
